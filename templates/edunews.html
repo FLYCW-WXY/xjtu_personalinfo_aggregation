@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教务新闻-西安交通大学信息聚合平台</title>
+    <!-- Bootstrap -->
+	<link href="{% static "css/bootstrap.css"%}" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+{% include "header.html" %}
+   <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse1">学籍管理</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.xjgl %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/xjgl.htm" target="_blank">查看更多...</a> </div>
+            </div>
+    </div>
+    </div></div>
+
+
+   <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse2">考试安排</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.ksap %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/ksap.htm" target="_blank">查看更多...</a> </div>
+            </div>
+        </div></div>
+    </div>
+      <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse3">课程安排</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.kcap %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/kcap.htm" target="_blank">查看更多...</a> </div>
+            </div>
+    </div>
+    </div></div>
+         <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse4">校际交流</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.xjjl %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/xjjl.htm" target="_blank">查看更多...</a> </div>
+            </div>
+    </div>
+    </div></div>
+            <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse5">竞赛安排</a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.jsap %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/jsap.htm" target="_blank">查看更多...</a> </div>
+            </div>
+    </div>
+    </div></div>
+               <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse6">专业辅修</a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.zyfx %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/zyfx.htm" target="_blank">查看更多...</a> </div>
+            </div>
+    </div>
+    </div></div>
+                 <div class="container">
+    <div class="panel-group" id="panelContainer">
+    	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse7">大创项目</a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse in">
+            <div class="panel-body">
+    			<table class="table table-hover">
+
+                      {% for item in newsContent.dcxm %}
+                        <tr>
+                            <td class="col-lg-1 col-md-3 col-sm-3 col-xs-3">{{ item.date }}</td>
+                            <td><a href="{{ item.link }}" target="_blank">{{ item.title }}</a> </td>
+                        </tr>
+
+
+                      {% endfor %}
+                </table>
+            </div>
+            <div class="panel-footer text-right"><a href="http://due.xjtu.edu.cn/jxxx/xytz/dcxm.htm" target="_blank">查看更多...</a> </div>
+            </div>
+    </div>
+    </div>
+{% include "footer.html" %}
+  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="{% static "js/jquery-1.11.3.min.js"%}"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="{% static "js/bootstrap.js"%}"></script>
+  </body>
+</html>
